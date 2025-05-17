@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creación de orden</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+        <a href="/index.html"><li>Crear orden</li></a>
+        <a href="/pages/buscarOrden.html"><li>Buscar orden</li></a>
+        <a href="/pages/actualizarOrden.html"><li>Actualizar orden</li></a>
+        <a href="/pages/EliminarOrden.html"><li>Eliminar orden orden</li></a>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <h1>Creacion de orden</h1>
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="cliente">Cliente</label>
+          <input type="text" id="cliente" required />
+        </div>
+        <div class="form-group">
+          <label for="cedula">Cedula cliente</label>
+          <input type="text" id="cedula" required />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Telefono cliente</label>
+          <input type="text" id="telefono" required />
+        </div>
+        <div class="form-group">
+          <label for="marca">Marca Equipo</label>
+          <input type="text" id="marca" required />
+        </div>
+        <div class="form-group">
+          <label for="serie">Num serie Equipo</label>
+          <input type="text" id="serie" required />
+        </div>
+        <div class="form-group">
+          <label for="accesorios">Accesorios</label>
+          <input type="text" id="accesorios" />
+        </div>
+        <div class="form-group">
+          <label for="detalles">Detalles</label>
+          <textarea id="detalles" rows="5"></textarea>
+        </div>
+        <button type="submit">Crear</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

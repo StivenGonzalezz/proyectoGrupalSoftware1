@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actualizar Orden</title>
+  <link rel="stylesheet" href="../css/actualizar.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <a href="/index.html"><li>Crear orden</li></a>
+        <a href="/pages/buscarOrden.html"><li>Buscar orden</li></a>
+        <a href="/pages/actualizarOrden.html"><li>Actualizar orden</li></a>
+        <a href="/pages/EliminarOrden.html"><li>Eliminar orden orden</li></a>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <h1>Actualizar de orden</h1>
+
+      <div class="buscar-id">
+        <label for="idOrden">Id orden</label>
+        <input type="number" id="idOrden" />
+        <button onclick="cargarOrden()">Buscar</button>
+      </div>
+
+      <hr />
+
+      <form id="formActualizar" onsubmit="actualizarOrden(event)">
+        <div class="form-grid">
+          <div>
+            <label>Cliente</label>
+            <input type="text" id="cliente" required />
+            <label>Cédula cliente</label>
+            <input type="text" id="cedula" required />
+            <label>Teléfono cliente</label>
+            <input type="text" id="telefono" required />
+            <label>Marca equipo</label>
+            <input type="text" id="marca" required />
+            <label>Num serie equipo</label>
+            <input type="text" id="serie" required />
+          </div>
+          <div>
+            <label>Accesorios</label>
+            <input type="text" id="accesorios" required />
+            <label>Detalles</label>
+            <textarea id="detalles" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="actualizar-btn">Actualizar</button>
+      </form>
+    </div>
+  </div>
+  <script src="../scripts/actualizar.js"></script>
+</body>
+</html>

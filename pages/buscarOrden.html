@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buscar Orden</title>
+  <link rel="stylesheet" href="../css/buscar.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <a href="/index.html"><li>Crear orden</li></a>
+        <a href="/pages/buscarOrden.html"><li>Buscar orden</li></a>
+        <a href="/pages/actualizarOrden.html"><li>Actualizar orden</li></a>
+        <a href="/pages/EliminarOrden.html"><li>Eliminar orden orden</li></a>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <h1>Buscar orden</h1>
+      <table id="tabla-ordenes">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Cliente</th>
+            <th>Cel</th>
+            <th>Equipo</th>
+            <th>Pagado</th>
+            <th>Valor Mantenimiento</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="buscar-id">
+        <label for="buscarId">id</label>
+        <input type="number" id="buscarId" />
+        <button onclick="buscarOrden()">Buscar</button>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/buscar.js"></script>
+</body>
+</html>
