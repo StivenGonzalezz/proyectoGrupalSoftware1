@@ -49,8 +49,9 @@
   
   .eliminar-form {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
   }
   
   .eliminar-form input {
@@ -62,8 +63,9 @@
   }
   
   .eliminar-form button {
+    align-self: flex-start;
     padding: 8px 16px;
-    background-color: #aa2a2a;
+    background-color: #2a88aa;
     border: none;
     border-radius: 8px;
     color: white;

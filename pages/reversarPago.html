@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buscar Orden</title>
-  <link rel="stylesheet" href="../css/buscar.css" />
+  <title>Reversar pago</title>
+  <link rel="stylesheet" href="../css/reversar.css" />
 </head>
 <body>
   <div class="container">
@@ -27,28 +27,15 @@
     </div>
 
     <div class="main-content">
-      <h1>Buscar orden</h1>
-      <table id="tabla-ordenes">
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>Cliente</th>
-            <th>Cel</th>
-            <th>Equipo</th>
-            <th>Pagado</th>
-            <th>Valor Mantenimiento</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <h1>Reversar pago</h1>
 
-      <div class="buscar-id">
-        <label for="buscarId">id</label>
-        <input type="number" id="buscarId" />
-        <button onclick="buscarOrden()">Buscar</button>
+      <div class="eliminar-form">
+        <label for="idOrden">Id orden</label>
+        <input type="number" id="idOrden" />
+        <button onclick="reversarPago()">Reversar</button>
       </div>
     </div>
   </div>
-  <script src="../scripts/buscar.js"></script>
+  <script src="../scripts/reversar.js"></script>
 </body>
 </html>

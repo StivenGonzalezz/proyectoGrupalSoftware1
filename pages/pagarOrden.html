@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realizar pago</title>
+  <link rel="stylesheet" href="../css/pago.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <h3>C.R.U.D</h3>
+        <ul>
+          <a href="/index.html"><li>Crear orden</li></a>
+          <a href="/pages/buscarOrden.html"><li>Buscar orden</li></a>
+          <a href="/pages/actualizarOrden.html"><li>Actualizar orden</li></a>
+          <a href="/pages/EliminarOrden.html"><li>Eliminar orden orden</li></a>
+        </ul>
+        <hr>
+        <h3>Funcionalidades</h3>
+        <ul>
+          <a href="/pages/asignarPrecioMto.html"><li>Asignar valor mto</li></a>
+          <a href="/pages/pagarOrden.html"><li>Realizar pago</li></a>
+          <a href="/pages/reversarPago.html"><li>Reversar pago</li></a>
+        </ul>
+        <hr>
+      </div>
+
+    <div class="main-content">
+      <h1>Realizar pago</h1>
+
+      <div class="pago-form">
+        <label for="idOrdenPago">ID de la orden</label>
+        <input type="number" id="idOrdenPago" />
+
+        <button onclick="consultarOrden()">Consultar valor</button>
+
+        <div id="infoOrden" style="display:none;">
+          <p>Valor a pagar: $<span id="valorMostrar">0</span></p>
+          <button onclick="realizarPago()">Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/pago.js"></script>
+</body>
+</html>
