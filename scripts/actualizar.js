@@ -38,7 +38,7 @@ function actualizarOrden(e) {
   }
 
   ordenes[index] = {
-    ...ordenes[index], 
+    ...ordenes[index],
     cliente: document.getElementById("cliente").value,
     cedula: document.getElementById("cedula").value,
     telefono: document.getElementById("telefono").value,
@@ -49,5 +49,15 @@ function actualizarOrden(e) {
   };
 
   localStorage.setItem("ordenes", JSON.stringify(ordenes));
-  alert("Orden actualizada correctamente.");
+
+  // Mostrar alerta de Bootstrap visual
+  const alertContainer = document.getElementById("alertContainer");
+  alertContainer.innerHTML = `
+    <div class="alert alert-info alert-dismissible fade show mt-3" role="alert" 
+         style="background-color: #1a2930; border: 1px solid #4db8ff; color: #bdeaff;">
+      🔄 Orden actualizada correctamente.
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+  `;
+  alertContainer.style.display = 'block';
 }

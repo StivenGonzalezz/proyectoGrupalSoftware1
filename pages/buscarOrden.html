@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Buscar Orden</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
   <link rel="stylesheet" href="../css/buscar.css" />
 </head>
 <body>
@@ -14,7 +18,7 @@
         <a href="/index.html"><li>Crear orden</li></a>
         <a href="/pages/buscarOrden.html"><li>Buscar orden</li></a>
         <a href="/pages/actualizarOrden.html"><li>Actualizar orden</li></a>
-        <a href="/pages/EliminarOrden.html"><li>Eliminar orden orden</li></a>
+        <a href="/pages/EliminarOrden.html"><li>Eliminar orden</li></a>
       </ul>
       <hr>
       <h3>Funcionalidades</h3>
@@ -28,10 +32,11 @@
 
     <div class="main-content">
       <h1>Buscar orden</h1>
+
       <table id="tabla-ordenes">
         <thead>
           <tr>
-            <th>id</th>
+            <th>ID</th>
             <th>Cliente</th>
             <th>Cel</th>
             <th>Equipo</th>
@@ -43,12 +48,34 @@
       </table>
 
       <div class="buscar-id">
-        <label for="buscarId">id</label>
+        <label for="buscarId">ID de orden</label>
         <input type="number" id="buscarId" />
         <button onclick="buscarOrden()">Buscar</button>
       </div>
     </div>
   </div>
+
+  <!-- Modal Bootstrap personalizado para modo oscuro -->
+  <div class="modal fade" id="modalOrden" tabindex="-1" aria-labelledby="modalOrdenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content" style="background-color: #222; color: white;">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="modalOrdenLabel">Detalles de la Orden</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Los datos se insertan por JS -->
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script JS -->
   <script src="../scripts/buscar.js"></script>
 </body>
 </html>

@@ -3,18 +3,26 @@
     font-family: 'Comic Sans MS', cursive, sans-serif;
   }
   
-  body {
-    margin: 0;
-    background-color: #1a1a1a;
-    color: white;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-  }
-  
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow: hidden; /* opcional: evita scroll externo */
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
   .sidebar {
     width: 250px;
     border-right: 1px solid #555;
